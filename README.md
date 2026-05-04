@@ -1,5 +1,8 @@
 # Wikipedia RAG Assistant
 
+## 🎥 Demo Video
+[Watch the 5-minute demo on Loom](https://www.loom.com/share/7fd1a9a0346d48dabbb5408d1e0fd858)
+
 A local, ChatGPT-style question-answering system about famous people and places — running entirely on your laptop. No external APIs are used.
 
 ## Architecture Overview
