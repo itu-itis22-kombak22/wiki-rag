@@ -28,6 +28,11 @@ from config import (
 # Fetch
 # ---------------------------------------------------------------------------
 
+_HEADERS = {
+    "User-Agent": "WikiRAG/1.0 (BLG483E course project; https://github.com/itu-itis22-kombak22/wiki-rag) python-requests"
+}
+
+
 def fetch_wikipedia(title: str) -> tuple[str, str]:
     """Return (plain_text, page_url) for the given Wikipedia page title."""
     params = {
@@ -39,7 +44,7 @@ def fetch_wikipedia(title: str) -> tuple[str, str]:
         "format": "json",
         "redirects": "1",
     }
-    resp = requests.get(WIKI_API_URL, params=params, timeout=15)
+    resp = requests.get(WIKI_API_URL, params=params, headers=_HEADERS, timeout=15)
     resp.raise_for_status()
     data = resp.json()
 
